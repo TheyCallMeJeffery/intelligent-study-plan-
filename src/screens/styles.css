@@ -1,0 +1,214 @@
+/* Modern Color Scheme */
+:root {
+  --primary-color: #4CAF50; /* Vibrant Green */
+  --secondary-color: #2196F3; /* Vibrant Blue */
+  --background-color: #F9FAFB; /* Soft Light Gray */
+  --text-color: #2D3748; /* Rich Dark Gray */
+  --card-background: #FFFFFF; /* Pure White */
+  --shadow-color: rgba(0, 0, 0, 0.1); /* Subtle Shadow */
+  --hover-color: #1E88E5; /* Hover Effect */
+}
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Headers */
+h1, h2, h3 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+/* Buttons */
+.button {
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: 500;
+  font-size: 1rem;
+  box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+.button:hover {
+  background-color: var(--hover-color);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px var(--shadow-color);
+}
+
+.button:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+/* Containers */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.section {
+  width: 100%;
+  margin: 40px 0;
+  padding: 30px;
+  background-color: var(--card-background);
+  border-radius: 12px;
+  box-shadow: 0 4px 8px var(--shadow-color);
+  transition: transform 0.3s ease;
+}
+
+.section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px var(--shadow-color);
+}
+
+/* Cards for Schedule Items */
+.card {
+  background-color: var(--card-background);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px var(--shadow-color);
+  margin-bottom: 20px;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px var(--shadow-color);
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #6B7280; /* Muted Gray */
+}
+
+/* Input Fields */
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #E2E8F0; /* Soft Border */
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: var(--card-background);
+  color: var(--text-color);
+  box-shadow: 0 2px 4px var(--shadow-color);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .container {
+      padding: 10px;
+  }
+
+  h1 {
+      font-size: 2rem;
+  }
+
+  h2 {
+      font-size: 1.5rem;
+  }
+
+  .button {
+      width: 100%;
+      padding: 14px;
+  }
+
+  .section {
+      padding: 20px;
+  }
+
+  .card {
+      padding: 15px;
+  }
+}
+
+/* Animation for Smooth Appearance */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.container, .section, .card {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  max-width: 300px;
+  margin: auto;
+}
+
+.close-btn {
+  color: black;
+  font-size: 20px;
+  cursor: pointer;
+}
